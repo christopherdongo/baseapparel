@@ -1,0 +1,41 @@
+
+.container{
+    display: grid;
+    grid-template-areas:
+     "header"
+     "photo"
+     "description"
+    ;
+    grid-template-columns: 1fr;
+}
+
+.header{
+    grid-area: header;
+}
+.photo{
+   grid-area: photo;
+
+   &--logo{
+       width: 100%;
+       height: 100%;
+   }
+}
+.description{
+  grid-area: description;
+}
+
+/*media query*/
+@media screen and (min-width: 992px){
+    .container{
+        grid-template-areas:
+        "header photo"
+        "description photo"
+        "description photo"
+       ;
+       grid-template-columns: 50% 50%;
+    }
+}
+
+@media screen and (min-width:1440px){
+
+}
