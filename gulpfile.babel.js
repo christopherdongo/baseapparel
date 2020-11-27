@@ -71,18 +71,18 @@ gulp.task('sass', ()=>{
     .pipe(gulp.dest('./docs/css'))
     .pipe(stream());
 });
-
+/*
 gulp.task('images', ()=> {
     return gulp.src('./src/images/*')
     .pipe(plumber())
     .pipe(imagemin([
         imagemin.gifsicle({ interlaced: true}),
-        imagemin.mozjpeg({ quality: 30, progressive: true}),
+        imagemin.mozjpeg({ quality: 100, progressive: true}),
         imagemin.optipng({ optimizationLevel: 1 })
     ]))
     .pipe(gulp.dest('./docs/images'))
 })
-
+*/
 gulp.task('clean', ()=>{
     return gulp
     .src('./docs/css/styles.css')

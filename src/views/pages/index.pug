@@ -11,11 +11,15 @@ html(lang='en')
     body
       main.container
         header.header
-          .logo
-            h1 hola como estas
+          .header--containslogo
+            img(src="images/logo.svg" alt="logo").header__logo
         div.photo
-         img(src="images/hero-desktop.jpg" alt="photo" class="photo--logo")
-        div.description
-         h1 Fugiat nulla minim duis ullamco sit occaecat elit ipsum fugiat Lorem. Ad aute non minim nisi elit qui. Aliquip exercitation ea ipsum eu ad ullamco incididunt ut officia. Non anim aliqua qui veniam fugiat veniam labore laborum pariatur nostrud deserunt. Ipsum ea tempor laboris nisi ullamco consequat Lorem culpa excepteur occaecat in. Id voluptate incididunt ad sint aliqua ullamco. Lorem est adipisicing fugiat mollit irure esse consectetur consectetur do.
+         img(src="images/hero-mobile.jpg" alt="photo" id="imgLogo").photo--imagen
+        section.description
+         .description--divinfo
+            h1.description--divinfo__title  #[span we're]  coming soon
+            p.description--divinfo__parrafo   Hello fellow shoppers!  span We're currently building our new fashion store. Add your email below to stay up-to-date with announcements and our launch deals.
+         .description__slide
+          input( type="text" name="email" placeholder="Email Address")
       
       script(src="js/scripts-min.js")
