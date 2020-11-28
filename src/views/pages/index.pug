@@ -12,14 +12,17 @@ html(lang='en')
       main.container
         header.header
           .header--containslogo
-            img(src="images/logo.svg" alt="logo").header__logo
+            img(src="images/logo.svg" alt="logo").header--containslogo__logo
         div.photo
-         img(src="images/hero-mobile.jpg" alt="photo" id="imgLogo").photo--imagen
+         img(src="images/hero-mobile.jpg" alt="photo" id="imgLogo").photo--imagen 
         section.description
          .description--divinfo
             h1.description--divinfo__title  #[span we're]  coming soon
             p.description--divinfo__parrafo   Hello fellow shoppers!  span We're currently building our new fashion store. Add your email below to stay up-to-date with announcements and our launch deals.
-         .description__slide
+         .description--slide
           input( type="text" name="email" placeholder="Email Address")
+          .description--slide__containsarrow
+            img(src="images/icon-arrow.svg" alt="arrow" id="arrow").description--slide__containsarrow__arrow
+          
       
       script(src="js/scripts-min.js")

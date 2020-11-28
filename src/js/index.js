@@ -1,37 +1,54 @@
 
 //variables
 const img =document.getElementById('imgLogo')
-const width = screen.width;
+let widt = screen.width;
 
-img.addEventListener('click', function(e){
-    console.log(e)
-})
+//const bgmobile = 'url("/images/hero-mobile.jpg")';
+//const bgdesktop = 'url("/images/hero-desktop.jpg")';
 
-/*
-if(width>765){
-   console.log('holaaaaa')    
-}*/
-window.onload;
 
-window.addEventListener('resize', (e)=>{
-    let widt=e.srcElement.innerWidth;
 
-      switch(true){
-        case widt<767:
-            backgroudmobile()
+window.addEventListener('resize', function(e){
+    let width=e.srcElement.innerWidth;
+    switch(true){
+        case (width<767 || widt<767):
+            backgroundmobile()
             break;
-        case widt>767:
-            backgrouddesktop()
+        case (width>=768 || widt>=768):
+            backgrounddesktop()
+            console.log(e.srcElement.innerWidth)
             break;
         default:
             break;
       }
 })
 
-const backgroudmobile=()=>{
+
+const backgroundmobile=()=>{
     img.src="images/hero-mobile.jpg"
+    //img.style.backgroundImage = bgmobile;
 }
-const backgrouddesktop=()=>{
+const backgrounddesktop=()=>{
     img.src="images/hero-desktop.jpg"
+    console.log('mas grande')
+    //img.style.backgraundImage = bgdesktop;
 }
 
+
+/*
+    window.addEventListener('resize', (e)=>{
+        let widt=e.srcElement.innerWidth;
+    
+          switch(true){
+            case widt<=767:
+                backgroundmobile()
+                break;
+            case widt>=767:
+                backgrounddesktop()
+                console.log(e.srcElement.innerWidth)
+                break;
+            default:
+                break;
+          }
+    }) 
+*/
