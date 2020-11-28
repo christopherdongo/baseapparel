@@ -20,10 +20,9 @@
         margin: 0 3rem;
 
     @media screen and (min-width: 768px){
-            width: 50%;
+            width: 60%;
             margin:3rem auto 0.5rem auto;
         }
-        
         &__logo{
             font-size: 2rem;
         }
@@ -46,7 +45,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  
+
   &--divinfo{
     display: flex;
     flex-direction: column;
@@ -55,7 +54,7 @@
     justify-content: center;
     margin: 0 2rem;
     margin-top: 3rem;
-   
+
     &__title{
         text-align: center;
         font-size: 3rem;
@@ -92,9 +91,10 @@
      position: relative;
      padding-bottom: 4rem;
      @media screen and(min-width:768px){
-        width: 40%;
+        max-width: 50%;
+        padding-top: 3rem;
+        margin-right:6rem ;
   }
-
      &__containsarrow{
       position: absolute;;
       z-index: 10000;
@@ -108,8 +108,9 @@
       right: 0;
 
       @media screen and(min-width:768px){
-            width: 85px;
-            border-radius: 30px;
+            width: 90px;
+            height: 54px;
+            border-radius: 25px;
       }
       &__arrow{
           height: 1rem;
@@ -124,10 +125,9 @@
       border: 1px solid var(--primaryDesatured);
       @media screen and(min-width:768px){
         width: 100%;
-    
+        padding: 1.1rem;
+   }
   }
-  }
-
   input::placeholder{
       color: var(--primaryDesatured); 
       font-size: 0.9rem;
@@ -135,10 +135,7 @@
   }
 }
 
-
-
 @media screen and (min-width: 545px) and (max-width:768px){
-
     .photo{
      margin: 0 2rem;
      }
@@ -172,22 +169,25 @@
     }
     .description{
         display: flex;
-        justify-content: flex-start;
         margin-top: 6rem;
         &--slide{
-            width: 50%;
+            width: 75%;
+            justify-content: flex-start;
+            justify-items: flex-start;
+         
         }
 
         &--divinfo{
              margin: 0;
-             width: 50%;
+             width: 60%;
+             justify-content: flex-start;
+             justify-items: flex-start;
             
-           
             &__title{
                 text-align: left;
-                font-size:3.5rem
+                font-size:3.5rem;
+                
             }
-
             &__parrafo{
                 text-align: left;
                 margin: 0;
