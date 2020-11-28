@@ -21,7 +21,7 @@
 
     @media screen and (min-width: 768px){
             width: 60%;
-            margin: auto;
+            margin:3rem auto 0.5rem auto;
         }
         
         &__logo{
@@ -146,8 +146,6 @@
     }
 }
 
-
-
 /*media query*/
 @media screen and (min-width: 768px){
 .container{
@@ -174,7 +172,7 @@
     .description{
         display: flex;
         justify-content: flex-start;
-        padding-top: 5rem;
+        margin-top: 6rem;
         &--slide{
             width: 60%;
         }
