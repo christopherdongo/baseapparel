@@ -14,15 +14,17 @@ html(lang='en')
           .header--containslogo
             img(src="images/logo.svg" alt="logo").header--containslogo__logo
         div.photo
-         img(src="images/hero-mobile.jpg" alt="photo" id="imgLogo").photo--imagen 
+         img(src="/images/hero-desktop.jpg" alt="photo" id="imgLogo").photo--imagen 
         section.description
          .description--divinfo
             h1.description--divinfo__title  #[span we're]  coming soon
             p.description--divinfo__parrafo   Hello fellow shoppers!  span We're currently building our new fashion store. Add your email below to stay up-to-date with announcements and our launch deals.
-         .description--slide
-          input( type="text" name="email" placeholder="Email Address")
-          .description--slide__containsarrow
-            img(src="images/icon-arrow.svg" alt="arrow" id="arrow").description--slide__containsarrow__arrow
-          
-      
+         form.description--form#form
+           .description--form--slide
+            input( type="text" id="email" placeholder="Email Address").description--form--slide__inputicons
+            button(type="submit" id="idbutton").description--form--slide__containsarrow
+              img(src="images/icon-arrow.svg" alt="arrow" id="arrow").description--form--slide__containsarrow__arrow
+           .containerError
+            p.containerError--messageError#messageError
+
       script(src="js/scripts-min.js")

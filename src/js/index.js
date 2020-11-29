@@ -1,54 +1,47 @@
 
 //variables
-const img =document.getElementById('imgLogo')
-let widt = screen.width;
+const img =document.getElementById('imgLogo');
+const email = document.getElementById('email');
+const Button = document.getElementById('idbutton');
+const form = document.getElementById('form');
+const message = document.getElementById('messageError');
+const valid =/^(([^<>()\[\]\\.,;:\s@”]+(\.[^<>()\[\]\\.,;:\s@”]+)*)|(“.+”))@((\[[0–9]{1,3}\.[0–9]{1,3}\.[0–9]{1,3}\.[0–9]{1,3}])|(([a-zA-Z\-0–9]+\.)+[a-zA-Z]{2,}))$/;
 
-//const bgmobile = 'url("/images/hero-mobile.jpg")';
-//const bgdesktop = 'url("/images/hero-desktop.jpg")';
 
 
+//let widt = window.screen.width;
 
+//redimencionar y cambiar el fondo de pantalla//
 window.addEventListener('resize', function(e){
     let width=e.srcElement.innerWidth;
     switch(true){
-        case (width<767 || widt<767):
+        case (width|| width)<768 :
             backgroundmobile()
             break;
-        case (width>=768 || widt>=768):
+        case (width || widt )>768 :
             backgrounddesktop()
-            console.log(e.srcElement.innerWidth)
             break;
         default:
             break;
       }
 })
 
+form.addEventListener('submit', function(e){
+     e.preventDefault()
+        if(valid.test(email.value)){
+        }else{ 
+           MostrarAlerta();
+           ShowError();
+           EliminarAlerta();
+        }
+})
 
-const backgroundmobile=()=>{
-    img.src="images/hero-mobile.jpg"
-    //img.style.backgroundImage = bgmobile;
-}
-const backgrounddesktop=()=>{
-    img.src="images/hero-desktop.jpg"
-    console.log('mas grande')
-    //img.style.backgraundImage = bgdesktop;
-}
+//mostrar y eliminar la alerta
+const MostrarAlerta=()=>(message.innerHTML='Please provide a valid email', email.style.border="2px solid var(--primaryRed)");   
+const ShowError=()=>( email.classList.add('iconserror'))
+const EliminarAlerta=()=>(setTimeout(()=>{ message.innerHTML='', email.classList.remove('iconserror'),email.style.border="" },1000));
 
 
-/*
-    window.addEventListener('resize', (e)=>{
-        let widt=e.srcElement.innerWidth;
-    
-          switch(true){
-            case widt<=767:
-                backgroundmobile()
-                break;
-            case widt>=767:
-                backgrounddesktop()
-                console.log(e.srcElement.innerWidth)
-                break;
-            default:
-                break;
-          }
-    }) 
-*/
+    //funciones que brindas los background segun el tamañana de pantalla
+const backgroundmobile=()=>(img.src="images/hero-mobile.jpg")
+const backgrounddesktop=()=>(img.src="images/hero-desktop.jpg")
