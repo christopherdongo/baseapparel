@@ -7,10 +7,7 @@ const form = document.getElementById('form');
 const message = document.getElementById('messageError');
 const valid =/^(([^<>()\[\]\\.,;:\s@”]+(\.[^<>()\[\]\\.,;:\s@”]+)*)|(“.+”))@((\[[0–9]{1,3}\.[0–9]{1,3}\.[0–9]{1,3}\.[0–9]{1,3}])|(([a-zA-Z\-0–9]+\.)+[a-zA-Z]{2,}))$/;
 
-
-
 //let widt = window.screen.width;
-
 //redimencionar y cambiar el fondo de pantalla//
 window.addEventListener('resize', function(e){
     let width=e.srcElement.innerWidth;
